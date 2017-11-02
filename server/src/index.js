@@ -1,9 +1,13 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import config from './config/config';
+
+//this runs the code in db but doesn't import any value 
+import './config/db';
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = config.PORT;
 
 app.use(bodyParser.json());
 

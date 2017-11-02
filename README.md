@@ -15,3 +15,34 @@ npm install babel-cli babel-plugin-transform-object-rest-spread babel-preset-env
   ```
   npm run-script dev
   ```
+
+## Questions I asked along the way
+
+* What is express? 
+
+  Express organizes application into an MVC architecture 
+
+* What is mongoose? 
+
+  Mongoose is the ORM, it is used for modeling mongodb 
+
+* PostgreSQL vs MongoDB? 
+
+  * PostgreSQL: 
+    * Vertical Scaling(doesn't scale very well)
+    * Could scale horizontally but need third party solution
+    * ACID database
+
+  * MongoDB: 
+    * Horizontal Scaling (good stuff, better for scaling)
+    * Automatic database sharding
+    * Potential loss of data 
+
+* Horizontal Scaling vs Vertical Scaling? 
+
+  * Horizontal Scaling: 
+    * Scale by adding more machines 
+    * Easier to scale dynamically 
+  * Vertical Scaling: 
+    * Scale by adding more CPU, it is
+    * Limited to the capacity of a single machine  
