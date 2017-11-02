@@ -16,6 +16,22 @@ npm install babel-cli babel-plugin-transform-object-rest-spread babel-preset-env
   npm run-script dev
   ```
 
+* A very strict but good linter 
+
+  npm install eslint eslint-config-equimper prettier eslint-config-prettier --save
+
+  then 
+
+  add file .eslintrc 
+  ```
+    {
+      "extends": [
+        "equimper",
+        "prettier"
+      ]
+    }
+  ```
+
 ## Questions I asked along the way
 
 * What is express? 
