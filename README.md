@@ -62,3 +62,18 @@ npm install babel-cli babel-plugin-transform-object-rest-spread babel-preset-env
   * Vertical Scaling: 
     * Scale by adding more CPU, it is
     * Limited to the capacity of a single machine  
+
+* What is async await? 
+
+  * async/await is similar to promise/then
+  * async can take in a call back and within that callback tell a variable 
+    to wait for result from another function call inside that callback
+  * promise itself is the result of a function
+
+* How does Array.from create array with size n? 
+
+  ```Javascript
+  Array.from({length: 2}) = [undefined, undefined];
+  Array.from({length: 2}, (a, b) => b) = [0,1];
+  Array.from([1,2,3], x => x + x) = [2,4,6];
+  ```
