@@ -3,9 +3,9 @@
 ## Notes: 
 * node doesn't understand ES6 syntax, however, babel can handle that problem,
   the line below installs babel and solve the problem:
-```
-npm install babel-cli babel-plugin-transform-object-rest-spread babel-preset-env --save
-```
+  ```
+  npm install babel-cli babel-plugin-transform-object-rest-spread babel-preset-env --save
+  ```
 * add run server line to package.json scripts:
   this also adds nodemon to recompile server on change
   ```
@@ -18,7 +18,9 @@ npm install babel-cli babel-plugin-transform-object-rest-spread babel-preset-env
 
 * A very strict but good linter 
 
+  ```
   npm install eslint eslint-config-equimper prettier eslint-config-prettier --save
+  ```
 
   then 
 
@@ -31,6 +33,52 @@ npm install babel-cli babel-plugin-transform-object-rest-spread babel-preset-env
       ]
     }
   ```
+
+* GraphQL Query fetch usage on console
+
+  * get all tweets
+  ```
+    {
+      getTweets{
+        _id
+        text
+      }
+    }
+  ```
+
+  * get target tweet
+  ```
+    <!-- pass in an id to fetch and specify what fields is wanted as response -->
+    {
+      getTweet(_id: "id") {
+        _id
+        text
+      }
+    }
+  ```
+
+* GraphQL Schema date type 
+
+1. Install graphql date:
+   ```
+   npm install graphql-date --save
+   ```
+
+2. In schema add to the top: 
+    ``` 
+    scalar Date
+    ```
+    Then we can specify a Date type:
+    ```
+    type {
+      createdAt: Date!
+    }
+    ```
+
+
+3. In the resolvers index specify a Date along with Query and Mutation
+   
+
 
 ## Questions I asked along the way
 

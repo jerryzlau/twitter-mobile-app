@@ -3,6 +3,7 @@ import Tweet from '../models/Tweet';
 
 const TWEETS_TOTAL = 10;
 
+// this is the seed
 export default async () => {
   try{
     await Tweet.remove();
